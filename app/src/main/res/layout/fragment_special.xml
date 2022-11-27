@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Special">
+
+    <LinearLayout
+        android:id="@+id/packagee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.75"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="25dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="8dp">
+            <TextView
+                android:text="Special"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.lukelorusso.verticalseekbar.VerticalSeekBar
+                android:id="@+id/mainslider1"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_weight="1"
+                app:vsb_bar_background="#eeeeee"
+                app:vsb_bar_progress_gradient_end="#4dd0e1"
+                app:vsb_bar_progress_gradient_start="#03a2ba"
+                app:vsb_progress="100"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/sliderText1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Length" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.lukelorusso.verticalseekbar.VerticalSeekBar
+                android:id="@+id/mainslider2"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                app:vsb_bar_background="#eeeeee"
+                android:layout_weight="1"
+                app:vsb_bar_progress_gradient_end="#4dd0e1"
+                app:vsb_bar_progress_gradient_start="#03a2ba"
+                app:vsb_progress="100"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/sliderText2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Width" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.lukelorusso.verticalseekbar.VerticalSeekBar
+                android:id="@+id/mainslider3"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                app:vsb_bar_background="#eeeeee"
+                app:vsb_bar_progress_gradient_end="#4dd0e1"
+                app:vsb_bar_progress_gradient_start="#03a2ba"
+                app:vsb_progress="100"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/sliderText3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Height" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contactButtton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Contact Us Let's Create What You Want" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="25dp"
+                android:layout_weight="1"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:src="@drawable/whatsapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="25dp"
+                android:layout_weight="1"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:src="@drawable/gmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="25dp"
+                android:layout_weight="1"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:src="@drawable/telegram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

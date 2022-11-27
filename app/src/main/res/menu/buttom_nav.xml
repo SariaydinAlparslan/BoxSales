@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Basic"
+        android:id="@+id/basic"
+        android:icon="@drawable/basic"/>
+    <item android:title="Deluxe"
+        android:id="@+id/deluxe"
+        android:icon="@drawable/deluxedark"/>
+    <item
+        android:id="@+id/placeholder"
+        android:title=""/>
+    <item android:title="Production"
+        android:id="@+id/production"
+        android:icon="@drawable/production"/>
+    <item
+        android:id="@+id/sales"
+        android:icon="@drawable/buydark"
+        android:title="Sales"/>
+</menu>
