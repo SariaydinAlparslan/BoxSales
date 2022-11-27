@@ -20,6 +20,7 @@
             app:cardUseCompatPadding="true"
             app:cardElevation="8dp">
             <TextView
+                android:id="@+id/basictext"
                 android:text="Basic"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -40,11 +41,13 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/birBasic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:cardCornerRadius="25dp"
                 app:cardUseCompatPadding="true"
+                android:onClick="buying"
                 app:cardElevation="8dp">
                 <ImageView
                     android:src="@drawable/bir"
@@ -55,7 +58,9 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
+                android:id="@+id/ikiBasic"
                 android:layout_height="match_parent"
+                android:onClick="buying"
                 app:cardCornerRadius="25dp"
                 android:layout_weight="1"
                 app:cardUseCompatPadding="true"
@@ -80,8 +85,10 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:onClick="buying"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/ucBasic"
             app:cardCornerRadius="25dp"
             app:cardUseCompatPadding="true"
             app:cardElevation="8dp">
@@ -93,7 +100,9 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:onClick="buying"
             android:layout_height="match_parent"
+            android:id="@+id/dortBasic"
             android:layout_weight="1"
             app:cardCornerRadius="25dp"
             app:cardUseCompatPadding="true"
@@ -118,7 +127,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="25dp"
+            android:onClick="buying"
             android:layout_weight="1"
+            android:id="@+id/besBasic"
             app:cardUseCompatPadding="true"
             app:cardElevation="8dp">
             <ImageView
@@ -132,8 +143,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="25dp"
+            android:onClick="buying"
             app:cardUseCompatPadding="true"
             android:layout_weight="1"
+            android:id="@+id/altıBasic"
             app:cardElevation="8dp">
             <ImageView
                 android:src="@drawable/uc"
@@ -148,37 +161,9 @@
         android:id="@+id/dort"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.15"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="25dp"
-            app:cardUseCompatPadding="true"
-            android:layout_weight="1"
-            app:cardElevation="8dp">
-            <ImageView
-                android:src="@drawable/dort"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="25dp"
-            app:cardUseCompatPadding="true"
-            android:layout_weight="1"
-            app:cardElevation="8dp">
-            <ImageView
-                android:src="@drawable/dort"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
-
-        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>

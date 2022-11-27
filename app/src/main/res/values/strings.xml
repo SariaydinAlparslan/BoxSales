@@ -2,4 +2,30 @@
     <string name="app_name">Box</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kargokutusu">CARGO BOX</string>
+    <string name="icerik">It is produced from corrugated cardboard and provides protection to your products against impacts and crushing in your cargo shipments.</string>
+    <string name="dort">Sturdy 4-Walled Cargo Box</string>
+    <string name="lock">"Cargo Box with Dovetail Lock System"</string>
+    <string name="heart">"Heart Durable Display Box"</string>
+    <string name="tongue">"Cargo Box with Tongue Lock System"</string>
+    <string name="dayanıklı">"Durable Cargo Box"</string>
+
+    <string name="kroma">"It is produced from chroma cardboard and meets the packaging needs of your small products."</string>
+    <string name="raf">"Thanks to its special design, it provides durability in Cargo and elegance in Shelf."</string>
+
+    <string-array name="number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
 </resources>

@@ -7,6 +7,7 @@ import com.erdemofset.box.databinding.ActivityMainBinding
 import com.erdemofset.box.ui.*
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.elevation.SurfaceColors
+import kotlinx.android.synthetic.main.fragment_basic.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener {
             replaceFragment(Special())
         }
+
+
     }
     private fun replaceFragment (fragment : Fragment){
 
