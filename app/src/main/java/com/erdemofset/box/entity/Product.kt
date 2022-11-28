@@ -13,7 +13,9 @@ class Product(
     val productCode: String,
     val rawMaterial : String,
     val productNot : String,
-    val internalDimensions : String
+    val internalDimensions : String,
+    val image : String,
+    val image2 : String
 
 ) : Serializable {
 }
