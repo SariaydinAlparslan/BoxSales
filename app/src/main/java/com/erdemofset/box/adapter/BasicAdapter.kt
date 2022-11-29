@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.erdemofset.box.R
 import com.erdemofset.box.databinding.RecyclerRowBinding
 import com.erdemofset.box.entity.Product
+import com.erdemofset.box.singleton.boxSingleton
 
 class BasicAdapter(var context: Context,val productList : ArrayList<Product>) : RecyclerView.Adapter<BasicAdapter.BasicAdapterHolder>() {
     var onItemClick : ((Product) -> Unit)? = null
@@ -28,14 +29,24 @@ class BasicAdapter(var context: Context,val productList : ArrayList<Product>) : 
         holder.binding.imageRecycler.setImageResource(resourceID)
         holder.itemView.setOnClickListener {
             val itemsViewModel= productList[position]
-            Toast.makeText(context, "Hello my Friend", Toast.LENGTH_SHORT).show()
+
+            boxSingleton.name = itemsViewModel.name
+            boxSingleton.length = itemsViewModel.length
+            boxSingleton.width = itemsViewModel.width
+            boxSingleton.height = itemsViewModel.height
+            boxSingleton.price = itemsViewModel.price
+            boxSingleton.productName = itemsViewModel.productName
+            boxSingleton.productInfo = itemsViewModel.productInfo
+            boxSingleton.productCode = itemsViewModel.productCode
+            boxSingleton.rawMaterial = itemsViewModel.rawMaterial
+            boxSingleton.productNot = itemsViewModel.productNot
+            boxSingleton.internalDimensions = itemsViewModel.internalDimensions
+            boxSingleton.imageBasic = itemsViewModel.image
+            boxSingleton.imageBasic2 = itemsViewModel.image2
+
             Toast.makeText(context, itemsViewModel.image2, Toast.LENGTH_SHORT).show()
             onItemClick?.invoke(itemsViewModel)
 
-            /*
-            val intent = Intent(holder.itemView.context,DetailsActivity::class.java)
-            MySingleton.chosenLandmark = productList.get(position)
-            holder.itemView.context.startActivity(intent)*/
         }
     }
 

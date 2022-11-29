@@ -1,6 +1,4 @@
-package com.erdemofset.box.bottomsheet
-
-import android.content.Context
+package com.erdemofset.box.bottomsheetbasic
 
 class ActionBottom {
     companion object{

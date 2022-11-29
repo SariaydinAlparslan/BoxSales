@@ -11,7 +11,7 @@
         android:id="@+id/Basic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_weight="7"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -24,6 +24,8 @@
                 android:text="Basic"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:background="@color/beige2"
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"/>

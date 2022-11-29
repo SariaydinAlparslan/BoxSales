@@ -19,7 +19,8 @@
             app:cardUseCompatPadding="true"
             app:cardElevation="8dp">
             <ImageView
-                android:src="@drawable/bir"
+                android:id="@+id/imageBottomSheet"
+                android:src="@drawable/altibir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"/>
@@ -44,11 +45,20 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
                 <TextView
+                    android:id="@+id/productNumberText"
+                    android:src="@drawable/bir"
+                    android:layout_width="match_parent"
+                    android:text="50 Pieces"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"/>
+                <TextView
                     android:id="@+id/productNameText"
                     android:src="@drawable/bir"
                     android:layout_width="match_parent"
                     android:text="productNameText"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
@@ -61,15 +71,44 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/productCodeTextText"
+                        android:layout_width="match_parent"
+                        android:text="Product Code :"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/productCodeText"
+                        android:src="@drawable/bir"
+                        android:layout_width="match_parent"
+                        android:text="productCodeText"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/productCodeText"
+                    android:id="@+id/internalDimensionsTextText"
                     android:src="@drawable/bir"
                     android:layout_width="match_parent"
-                    android:text="productCodeText"
+                    android:text="Internal Dimensions :"
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
+
                 <TextView
                     android:id="@+id/internalDimensionsText"
                     android:src="@drawable/bir"
@@ -79,15 +118,32 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/rawMaterialText"
+                    android:id="@+id/rawMaterialTextText"
                     android:src="@drawable/bir"
                     android:layout_width="match_parent"
-                    android:text="rawMaterialText"
+                    android:text="Raw Material :"
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/rawMaterialText"
+                    android:src="@drawable/bir"
+                    android:layout_width="match_parent"
+                    android:text="raw"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
             </LinearLayout>
 
@@ -105,15 +161,80 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/nameText"
-                    android:src="@drawable/bir"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:text="nameText"
-                    android:layout_weight="2"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/lengthTextText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Length" />
+                    <TextView
+                        android:id="@+id/widthTextText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Width" />
+                    <TextView
+                        android:id="@+id/heightTextText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Height" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="2">
+                    <TextView
+                        android:id="@+id/lengthText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Length" />
+                    <TextView
+                        android:id="@+id/widthText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Width" />
+                    <TextView
+                        android:id="@+id/heightText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:src="@drawable/bir"
+                        android:text="Height" />
+                </LinearLayout>
+
+            </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -126,13 +247,15 @@
                         android:text="priceText"
                         android:layout_weight="2"
                         android:layout_gravity="center"
+                        android:textColor="@color/create1"
                         android:gravity="center"
                         android:layout_height="match_parent"/>
+
                     <TextView
                         android:id="@+id/kargo"
                         android:src="@drawable/bir"
                         android:layout_width="match_parent"
-                        android:text="Ücretsiz Kargo"
+                        android:text="@string/ücretsiz"
                         android:textFontWeight="@integer/material_motion_duration_long_1"
                         android:layout_weight="3"
                         android:layout_gravity="center"
@@ -164,11 +287,11 @@
                     android:gravity="center"
                     app:backgroundTint="@color/green"
                     android:drawableRight="@drawable/buydark"
-                    android:text="Sepete Ekle"/>
+                    android:text="@string/sepet"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"/>
+                    android:layout_weight="3.5"/>
 
             </LinearLayout>
             </LinearLayout>

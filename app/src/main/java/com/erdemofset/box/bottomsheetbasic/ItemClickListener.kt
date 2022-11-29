@@ -1,4 +1,4 @@
-package com.erdemofset.box.bottomsheet
+package com.erdemofset.box.bottomsheetbasic
 
 interface ItemClickListener {
     fun onItemClick(item :String?)
