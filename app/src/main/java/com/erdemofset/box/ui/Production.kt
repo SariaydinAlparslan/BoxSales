@@ -32,12 +32,38 @@ class Production : Fragment() {
         val mediaController = MediaController(requireContext())
         mediaController.setAnchorView(binding.videoView)
 
-        val uri = Uri.parse("android.resource://com.sariaydinalparslan.box2box/${R.raw.samet}")
-        binding.videoView.setMediaController(mediaController)
-        binding.videoView.setVideoURI(uri)
-        binding.videoView.requestFocus()
-
         binding.birVideo.setOnClickListener {
+            val uri = Uri.parse("android.resource://com.erdemofset.box/${R.raw.bir}")
+            binding.videoView.setMediaController(mediaController)
+            binding.videoView.setVideoURI(uri)
+            binding.videoView.requestFocus()
+            binding.videos.visibility = View.GONE
+            binding.videoViewLayout.visibility = View.VISIBLE
+            binding.videoView.start()
+        }
+        binding.ikiVideo.setOnClickListener {
+            val uri2 = Uri.parse("android.resource://com.erdemofset.box/${R.raw.iki}")
+            binding.videoView.setMediaController(mediaController)
+            binding.videoView.setVideoURI(uri2)
+            binding.videoView.requestFocus()
+            binding.videos.visibility = View.GONE
+            binding.videoViewLayout.visibility = View.VISIBLE
+            binding.videoView.start()
+        }
+        binding.ucVideo.setOnClickListener {
+            val uri3 = Uri.parse("android.resource://com.erdemofset.box/${R.raw.uc}")
+            binding.videoView.setMediaController(mediaController)
+            binding.videoView.setVideoURI(uri3)
+            binding.videoView.requestFocus()
+            binding.videos.visibility = View.GONE
+            binding.videoViewLayout.visibility = View.VISIBLE
+            binding.videoView.start()
+        }
+        binding.dortVideo.setOnClickListener {
+            val uri4 = Uri.parse("android.resource://com.erdemofset.box/${R.raw.dort}")
+            binding.videoView.setMediaController(mediaController)
+            binding.videoView.setVideoURI(uri4)
+            binding.videoView.requestFocus()
             binding.videos.visibility = View.GONE
             binding.videoViewLayout.visibility = View.VISIBLE
             binding.videoView.start()

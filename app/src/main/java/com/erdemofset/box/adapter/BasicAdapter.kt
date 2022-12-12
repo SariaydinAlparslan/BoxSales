@@ -24,7 +24,6 @@ class BasicAdapter(var context: Context,val productList : ArrayList<Product>) : 
 
     override fun onBindViewHolder(holder: BasicAdapterHolder, position: Int) {
         val alp = productList.get(position).image
-        Log.e("alp",alp)
         val resourceID =  context.resources.getIdentifier("${alp}", "drawable",context.packageName)
         holder.binding.imageRecycler.setImageResource(resourceID)
         holder.itemView.setOnClickListener {
@@ -44,7 +43,6 @@ class BasicAdapter(var context: Context,val productList : ArrayList<Product>) : 
             boxSingleton.imageBasic = itemsViewModel.image
             boxSingleton.imageBasic2 = itemsViewModel.image2
 
-            Toast.makeText(context, itemsViewModel.image2, Toast.LENGTH_SHORT).show()
             onItemClick?.invoke(itemsViewModel)
 
         }

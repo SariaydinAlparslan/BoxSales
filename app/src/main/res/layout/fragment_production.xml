@@ -17,7 +17,7 @@
             android:id="@+id/Basic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="1.65"
             android:orientation="vertical">
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -27,10 +27,11 @@
                 app:cardElevation="8dp">
                 <TextView
                     android:text="Production"
-                    android:layout_gravity="center"
                     android:gravity="center"
+                    android:background="@drawable/grey"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:textColor="@color/white"
                     android:scaleType="fitXY"/>
 
             </androidx.cardview.widget.CardView>
@@ -39,23 +40,40 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1.1"
+            android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:id="@+id/birVideo"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 app:cardCornerRadius="25dp"
                 app:cardUseCompatPadding="true"
                 app:cardElevation="8dp">
                 <ImageView
-                    android:src="@drawable/productionbir"
+                    android:src="@drawable/productionssiki"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"/>
 
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/ikiVideo"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="25dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:src="@drawable/productionss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+            </androidx.cardview.widget.CardView>
+
 
         </LinearLayout>
         <LinearLayout
@@ -63,15 +81,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
+                android:id="@+id/ucVideo"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 app:cardCornerRadius="25dp"
                 app:cardUseCompatPadding="true"
                 app:cardElevation="8dp">
                 <ImageView
+                    android:src="@drawable/productionss4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/dortVideo"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="25dp"
+
+                app:cardUseCompatPadding="true"
+                app:cardElevation="8dp">
+                <ImageView
+                    android:src="@drawable/productionssuc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"/>
@@ -79,8 +117,6 @@
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
-
 
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout

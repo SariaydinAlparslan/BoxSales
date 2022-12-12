@@ -1,5 +1,8 @@
 package com.erdemofset.box.bottomsheetdeluxe
 
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +13,12 @@ import com.erdemofset.box.R
 import com.erdemofset.box.singleton.boxSingleton
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.bottom_sheet_settings.*
+import kotlinx.android.synthetic.main.bottom_sheet_settings.imageBottomSheet
+import kotlinx.android.synthetic.main.bottom_sheet_settings.productCodeText
+import kotlinx.android.synthetic.main.bottom_sheet_settings_deluxe.*
 import kotlinx.android.synthetic.main.fragment_deluxe.*
+import kotlinx.coroutines.flow.combine
+import java.net.URLEncoder
 
 class ActionBottomDialogDeluxeFragment(private var mListener: ItemClickListenerDeluxe):BottomSheetDialogFragment(), View.OnClickListener{
 
@@ -23,25 +31,30 @@ class ActionBottomDialogDeluxeFragment(private var mListener: ItemClickListenerD
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.bottom_sheet_settings,container,false)
+        return inflater.inflate(R.layout.bottom_sheet_settings_deluxe,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dss.setOnClickListener { Toast.makeText(requireContext(), "Hello My Friend", Toast.LENGTH_SHORT).show() }
 
-        productNameText.text = boxSingleton.productName2
-        productInfoText.text = boxSingleton.productInfo2
         productCodeText.text = boxSingleton.productCode2
-        internalDimensionsText.text= boxSingleton.internalDimensions2
-        rawMaterialText.text = boxSingleton.rawMaterial2
-        priceText.text = boxSingleton.price2!!.toInt().toString() +" "+"$"
-        lengthText.text =boxSingleton.length2.toString()
-        heightText.text =boxSingleton.height2.toString()
-        widthText.text =boxSingleton.width2.toString()
 
         val resourceID =  requireContext().resources.getIdentifier("${boxSingleton.imageDeluxe}", "drawable",requireContext().packageName)
         imageBottomSheet.setImageResource(resourceID)
+
+        //whatsapp
+        deluxeWhat.setOnClickListener {
+            val packageManager : PackageManager =requireActivity().packageManager
+            val i = Intent(Intent.ACTION_VIEW)
+            val url = "https://api.whatsapp.com/send?phone=" + "0905452370510" + "&text="+ URLEncoder
+                .encode( productCodeText.text.toString()
+                    ,"UTF-8")
+            i.setPackage("com.whatsapp")
+            i.data = Uri.parse(url)
+            if(i.resolveActivity(packageManager) != null){
+                startActivity(i)
+            }
+        }
     }
 
     override fun onClick(p0: View?) {

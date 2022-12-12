@@ -44,15 +44,18 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
                 <TextView
-                    android:id="@+id/productNumberText"
-                    android:src="@drawable/bir"
+                    android:id="@+id/product50Text"
                     android:layout_width="match_parent"
-                    android:text="50 Pieces"
-                    android:layout_weight="1"
+                    android:text="alp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_weight="0.8"
                     android:gravity="center"
-                    android:layout_height="match_parent"/>
+                    android:textColor="@color/beige2"
+                    android:textSize="35sp" />
+
                 <TextView
                     android:id="@+id/productNameText"
                     android:src="@drawable/bir"
@@ -166,7 +169,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_weight="2">
+                android:layout_weight="1.5">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -233,7 +236,15 @@
                         android:src="@drawable/bir"
                         android:text="Height" />
                 </LinearLayout>
+                <Spinner
+                    android:id="@+id/spNumbersBasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="50dp"
+                    android:entries="@array/number">
 
+                </Spinner>
             </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -268,26 +279,16 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <Spinner
-                    android:id="@+id/spMonths"
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4.5"
-                    android:paddingLeft="50dp"
-                    android:entries="@array/number">
-
-                </Spinner>
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
+                    android:layout_height="400dp"
+                    app:lottie_rawRes="@raw/cartlottie"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"
                     android:layout_weight="4"
-                    android:layout_gravity="center"
-                    app:cornerRadius="55dp"
-                    android:gravity="center"
-                    app:backgroundTint="@color/green"
-                    android:drawableRight="@drawable/buydark"
-                    android:text="@string/sepet"/>
+                    />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

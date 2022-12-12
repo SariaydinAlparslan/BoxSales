@@ -17,17 +17,13 @@ object boxSingleton {
     var imageBasic2: String? = ""
 
     //deluxe
-    var name2: String? = ""
-    var length2: Double? = 0.0
-    var width2: Double? = 0.0
-    var height2: Double? = 0.0
-    var price2: Double? = 0.0
-    var productName2: String? = ""
-    var productInfo2: String? = ""
     var productCode2: String? = ""
-    var rawMaterial2: String? = ""
-    var productNot2: String? = ""
-    var internalDimensions2: String? = ""
     var imageDeluxe: String? = ""
-    var imageDeluxe2: String? = ""
+
+    //sales
+    var salesProductName: String? = ""
+    var salesProductNumber: String? = ""
+    var salesProductPrice: Int? = 0
+    var salesProductCode: String? = ""
+    var salesProductNumber50: String? = ""
 }

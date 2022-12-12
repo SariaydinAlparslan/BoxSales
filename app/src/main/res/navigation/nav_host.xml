@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/actionBottomDialogFragment">
+
+    <dialog
+        android:id="@+id/actionBottomDialogFragment"
+        android:name="com.erdemofset.box.bottomsheetbasic.ActionBottomDialogFragment"
+        android:label="ActionBottomDialogFragment" >
+        <action
+            android:id="@+id/actionBasic"
+            app:destination="@id/basic2" />
+    </dialog>
+    <fragment
+        android:id="@+id/basic2"
+        android:name="com.erdemofset.box.ui.Basic"
+        android:label="fragment_basic"
+        tools:layout="@layout/fragment_basic" />
+    <dialog
+        android:id="@+id/actionBottomDialogDeluxeFragment"
+        android:name="com.erdemofset.box.bottomsheetdeluxe.ActionBottomDialogDeluxeFragment"
+        android:label="ActionBottomDialogDeluxeFragment" >
+        <action
+            android:id="@+id/actionDeluxe"
+            app:destination="@id/deluxe2" />
+    </dialog>
+    <fragment
+        android:id="@+id/deluxe2"
+        android:name="com.erdemofset.box.ui.Deluxe"
+        android:label="fragment_deluxe"
+        tools:layout="@layout/fragment_deluxe" />
+</navigation>

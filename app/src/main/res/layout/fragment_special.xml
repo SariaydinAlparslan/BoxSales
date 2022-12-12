@@ -11,21 +11,25 @@
         android:id="@+id/packagee"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.75"
+        android:layout_weight="1.8"
         android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="25dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
             <TextView
-                android:text="Special"
-                android:layout_gravity="center"
-                android:gravity="center"
+                android:background="@color/create1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"/>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:scaleType="fitXY"
+                android:text="Special" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -34,93 +38,137 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="Create Your Box Enter Unit"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="25dp"
+            android:layout_weight="0.9"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="8dp">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/create" />
+        </androidx.cardview.widget.CardView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <com.lukelorusso.verticalseekbar.VerticalSeekBar
-                android:id="@+id/mainslider1"
-                android:layout_gravity="center"
-                android:layout_width="60dp"
-                android:layout_weight="1"
-                app:vsb_bar_background="#eeeeee"
-                app:vsb_bar_progress_gradient_end="#4dd0e1"
-                app:vsb_bar_progress_gradient_start="#03a2ba"
-                app:vsb_progress="100"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/lengthText"
+            android:orientation="horizontal"
+            android:layout_weight="1.4">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="Length" />
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Length : "
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/editL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Width : "
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/editW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Height : " />
+
+                <EditText
+                    android:id="@+id/editH"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/pickColor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <com.lukelorusso.verticalseekbar.VerticalSeekBar
-                android:id="@+id/mainslider2"
-                android:layout_gravity="center"
-                android:layout_width="60dp"
-                app:vsb_bar_background="#eeeeee"
-                android:layout_weight="1"
-                app:vsb_bar_progress_gradient_end="#4dd0e1"
-                app:vsb_bar_progress_gradient_start="#03a2ba"
-                app:vsb_progress="100"
-                android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/widthText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="Width" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <com.lukelorusso.verticalseekbar.VerticalSeekBar
-                android:id="@+id/mainslider3"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_width="60dp"
-                app:vsb_bar_background="#eeeeee"
-                app:vsb_bar_progress_gradient_end="#4dd0e1"
-                app:vsb_bar_progress_gradient_start="#03a2ba"
-                app:vsb_progress="100"
-                android:layout_height="match_parent"/>
+            android:layout_weight="1.5"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/heightText"
+                android:layout_width="243dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/palette_24"
+                android:gravity="center"
+                android:text="Pick Color"
+                android:textColor="@color/blue" />
+            <TextView
+                android:id="@+id/pickColorText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="Height" />
+                android:layout_weight="3"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/pickColorImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"/>
 
         </LinearLayout>
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.3"
         android:orientation="vertical">
-
         <TextView
             android:id="@+id/contactButtton"
             android:layout_width="match_parent"
