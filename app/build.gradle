@@ -16,8 +16,8 @@ android {
         applicationId "com.erdemofset.box"
         minSdk 23
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,8 +53,6 @@ dependencies {
     //Fragments
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.1")
-    //slider
-    implementation 'com.github.lukelorusso:VerticalSeekBar:1.2.7'
 
     implementation 'com.airbnb.android:lottie:3.4.0'
 

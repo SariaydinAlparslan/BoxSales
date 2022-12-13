@@ -46,7 +46,7 @@ class ActionBottomDialogDeluxeFragment(private var mListener: ItemClickListenerD
         deluxeWhat.setOnClickListener {
             val packageManager : PackageManager =requireActivity().packageManager
             val i = Intent(Intent.ACTION_VIEW)
-            val url = "https://api.whatsapp.com/send?phone=" + "0905452370510" + "&text="+ URLEncoder
+            val url = "https://api.whatsapp.com/send?phone=" + "0905559612961" + "&text="+ URLEncoder
                 .encode( productCodeText.text.toString()
                     ,"UTF-8")
             i.setPackage("com.whatsapp")

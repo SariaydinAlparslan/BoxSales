@@ -47,7 +47,7 @@ class Special : Fragment() {
                 if(binding.editH.text.isNotEmpty()&& binding.editL.text.isNotEmpty() && binding.editW.text.isNotEmpty()&& binding.pickColorText.text.isNotEmpty()){
                     val packageManager : PackageManager = packageManager
                     val i = Intent(Intent.ACTION_VIEW)
-                    val url = "https://api.whatsapp.com/send?phone=" + "0905452370510" + "&text="+ URLEncoder
+                    val url = "https://api.whatsapp.com/send?phone=" + "0905559612961" + "&text="+ URLEncoder
                         .encode("Length :"+ binding.editL.text.toString()+ " "+ " Width: "+ binding.editW.text.toString()+ " "+ "Height : " + binding.editH.text.toString()+ " "+ "Color : "+ binding.pickColorText.text
                             ,"UTF-8")
                     i.setPackage("com.whatsapp")

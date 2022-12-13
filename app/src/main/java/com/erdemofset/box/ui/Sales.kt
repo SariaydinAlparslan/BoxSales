@@ -1,15 +1,20 @@
 package com.erdemofset.box.ui
 
 import android.content.Context.MODE_PRIVATE
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.erdemofset.box.R
 import com.erdemofset.box.databinding.FragmentSalesBinding
 import com.erdemofset.box.singleton.boxSingleton
 import kotlinx.android.synthetic.main.fragment_sales.*
+import java.net.URLEncoder
 
 class Sales : Fragment() {
 
@@ -80,15 +85,15 @@ class Sales : Fragment() {
         }
 
         binding.productCodeText.text = order1Code
-        binding.priceText.text = order1Price.toString()
+        binding.priceText.text = order1Price.toString()+"  "+ "$"
         binding.productNumberText.text =  order1Number50
 
         binding.productCodeText2.text = order2Code
-        binding.priceText2.text = order2Price.toString()
+        binding.priceText2.text = order2Price.toString()+"  "+ "$"
         binding.productNumberText2.text = order2Number50
 
         binding.productCodeText3.text = order3Code
-        binding.priceText3.text = order3Price.toString()
+        binding.priceText3.text = order3Price.toString()+"  "+ "$"
         binding.productNumberText3.text = order3Number50
 
         binding.toplamText.text = (order1Price!! + order2Price!! + order3Price!!).toString()+"  "+ "$"
@@ -97,10 +102,7 @@ class Sales : Fragment() {
             replaceFragment(Basic())
         }
         binding.removeAll.setOnClickListener {
-           /* binding.productNumberText.text = ""
-            binding.productNumberText2.text = ""
-            binding.productNumberText3.text = ""
-*/
+
             sharedPreferences.edit().remove("order1").apply()
             sharedPreferences.edit().remove("order2").apply()
             sharedPreferences.edit().remove("order3").apply()
@@ -120,7 +122,21 @@ class Sales : Fragment() {
             replaceFragment(Sales())
         }
         binding.contactUsBtn.setOnClickListener {
-            //whatsupp
+            val packageManager = requireActivity().packageManager
+            if(order1.visibility == View.VISIBLE){
+                    val packageManager : PackageManager = packageManager
+                    val i = Intent(Intent.ACTION_VIEW)
+                    val url = "https://api.whatsapp.com/send?phone=" + "0905559612961" + "&text="+ URLEncoder
+                        .encode("I want " + binding.productNumberText.text+" "+binding.productCodeText.text+", " + binding.productNumberText2.text+" "+binding.productCodeText2.text+" "+binding.productNumberText3.text+" "+binding.productCodeText3.text
+                            ,"UTF-8")
+                    i.setPackage("com.whatsapp")
+                    i.data = Uri.parse(url)
+                    if(i.resolveActivity(packageManager) != null){
+                        startActivity(i)
+                    }
+                }else{
+                    Toast.makeText(requireContext(), "Please Enter Values And Pick Color", Toast.LENGTH_LONG).show()
+                }
         }
     }
     private fun replaceFragment (fragment : Fragment){
